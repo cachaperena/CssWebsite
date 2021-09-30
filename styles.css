@@ -1,0 +1,338 @@
+@import 'https://fonts.googleapis.com/css2?family=VT323&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Righteous&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#Navigation{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 50px;
+    padding: 10px 90px;
+    box-sizing: border-box;
+    background: rgba(133, 47, 145, 0.7);
+    border-bottom: 1px solid rgb(133, 47, 145);
+}
+
+.logo{
+    padding: 22, 20px;
+    height: 80px;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    font-family: Righteous;
+}
+
+nav ul{
+    list-style: none;
+    float: right;
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+}
+
+nav ul li a{
+    line-height: 25px;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: Righteous;
+}
+
+nav ul li a:hover{
+    background: rgb(205, 151, 207);
+    border-radius: 10px;
+}
+
+#Home{
+    background-image: linear-gradient(rgba(0,0,0,0.3), orchid), url(images/wallpapersden.com_cyrodiil-pixel-art_1920x1080.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.Picture{
+    width: 725px;
+    position: absolute;
+    top: 4%;
+    left: 36%;
+    
+}
+
+.Home-Text{
+    text-align: center;
+    color: #fff;
+    padding-top: 350px;
+}
+
+.Home-Text h1{
+    font-size: 120px;
+    font-family: VT323;
+}
+
+.Home-Text p{
+    font-size: 30px;
+    font-family: Chakra Petch;
+    
+}
+
+.Home-Audio{
+    margin: 50px auto 0;
+}
+
+/*-- About Me --*/
+#aboutme{
+    width: 100%;
+    padding: 70px, 0;
+}
+
+.aboutme-Text{
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 70px;
+}
+
+.aboutme-Text h1{
+    margin-top: 25px;
+    font-size: 45px;
+    color: rgb(53, 6, 97);
+    font-family: 'Press Start 2P';
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+
+.aboutme-Text h1::after{
+    content: '';
+    width: 350px;
+    height: 35px;
+    background: linear-gradient(rgb(231, 36, 238), #fff);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: -1;
+    transform: rotate(5deg);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
+.aboutme-box{
+    width: 80%;
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+.aboutme1{
+    flex-basis: 50%;
+}
+
+.aboutme1-img{
+    flex-basis: 50%;
+    margin: auto;
+}
+
+.aboutme1-img img{
+    width: 70%;
+    border-radius: 10px;
+}
+
+.aboutme1 h1{
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: blueviolet;
+    font-size: 20px;
+    font-family: 'Press Start 2P';
+}
+
+.aboutme1-say{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.aboutme1-icon .fa{
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    line-height: 50px;
+    border-radius: 8px;
+    color: blueviolet;
+    border: 1px solid blueviolet;
+}
+
+.aboutme1-text{
+    padding: 0, 15px;
+    text-align: initial;
+    font-size: 25px;
+    font-family: Chakra Petch;
+}
+
+/*-- End About Me --*/
+
+/*-- Like --*/
+
+#Like{
+    width: 100%;
+    padding: 70px 0;
+    background: rgb(166, 109, 172);
+}
+
+.like-box{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.single-like{
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+}
+
+.single-like img{
+    width: 100%;
+    border-radius: 7px;
+}
+
+.single-like iframe{
+    width: 100%;
+    border-radius: 7px;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(rgb(231, 36, 238), #fff);
+    opacity: 0;
+    transition: 1s;
+}
+
+.single-like:hover .overlay{
+    opacity: 1;
+}
+
+.like-desc{
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: 1s;
+}
+
+hr{
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%;
+}
+
+.like-desc h3{
+    font-family: 'Press Start 2P';
+    color: black;
+}
+
+.like-desc p{
+    font-size: 14px;
+    color: black;
+    font-family: Chakra Petch;
+}
+
+.single-like:hover .like-desc{
+    bottom: 40%;
+    opacity: 1;
+}
+
+/*-- End Like --*/
+
+/*-- Contacts --*/
+
+.Contacts{
+    padding: 100px 0 20px;
+    position: relative;
+    
+}
+
+.lastpic{
+    width: 10px;
+    position:inherit;
+    top: 4%;
+    right: 34%;
+}
+
+
+.contacts-right{
+    text-align: center;
+    font-family: 'Press Start 2P';
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.contacts-right h1{
+    margin: 50px, 0;
+}
+
+.contacts-right p{
+    font-family: Chakra Petch;
+    font-size: 15px;
+    border-top: 20px;
+    line-height: 25px;
+    
+}
+
+.social-contacts{
+    text-align: center;
+    padding: 20px, 0px;
+}
+
+.social-contacts img{
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    border: 1px, solid blueviolet;
+    margin: 40px 5px 0;
+    color: blueviolet;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.social-contacts img:hover{
+    background: blueviolet;
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.social-contacts p{
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: Chakra Petch;
+}
+
+
